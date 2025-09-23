@@ -29,7 +29,7 @@ const Hero: React.FC = () => {
           <div className="relative">
             <div className="relative z-10">
               <img
-                src="https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="./../public/image/cofe1.jpg"
                 alt="قهوه تازه"
                 className="rounded-2xl shadow-2xl w-full h-96 object-cover"
               />

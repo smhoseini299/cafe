@@ -39,7 +39,7 @@ const About: React.FC = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div>
             <img
-              src="https://images.pexels.com/photos/1797428/pexels-photo-1797428.jpeg?auto=compress&cs=tinysrgb&w=800"
+              src="./../public/image/cafee.jpeg"
               alt="داخل کافه"
               className="rounded-2xl shadow-xl w-full h-96 object-cover"
             />
@@ -83,17 +83,17 @@ const About: React.FC = () => {
               {
                 name: 'احمد محمدی',
                 role: 'سرآشپز',
-                image: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=400'
+                image: './../public/image/bar4.jpg'
               },
               {
                 name: 'سارا کریمی',
                 role: 'باریستا ارشد',
-                image: 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=400'
+                image: './../public/image/bar1.jpg'
               },
               {
                 name: 'علی رضایی',
                 role: 'متخصص برشته کاری',
-                image: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=400'
+                image: './../public/image/bar2.png'
               }
             ].map((member, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">

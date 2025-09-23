@@ -4,7 +4,7 @@ const FeaturedProducts: React.FC = () => {
   const specialOffer = {
     title: "پیشنهاد ویژه امروز",
     description: "لاته دابل شات با ۳۰٪ تخفیف",
-    image: "https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=800"
+    image: "./../public/image/late2.jpg"
   };
 
   const bestSellers = [
@@ -12,21 +12,21 @@ const FeaturedProducts: React.FC = () => {
       id: 1,
       name: "کاپوچینو",
       price: "۶۵,۰۰۰",
-      image: "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=800",
+      image: "./../public/image/capochino.jpg",
       tag: "پرفروش"
     },
     {
       id: 2,
       name: "اسپرسو",
       price: "۴۵,۰۰۰",
-      image: "https://images.pexels.com/photos/374757/pexels-photo-374757.jpeg?auto=compress&cs=tinysrgb&w=800",
+      image: "./../public/image/esperso.jpg",
       tag: "کلاسیک"
     },
     {
       id: 3,
       name: "موکا",
       price: "۷۵,۰۰۰",
-      image: "https://images.pexels.com/photos/1170659/pexels-photo-1170659.jpeg?auto=compress&cs=tinysrgb&w=800",
+      image: "./../public/image/moca.jpg",
       tag: "جدید"
     }
   ];

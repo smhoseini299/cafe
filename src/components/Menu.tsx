@@ -19,7 +19,7 @@ const Menu: React.FC = () => {
         name: 'اسپرسو کلاسیک',
         price: 25000,
         description: 'قهوه‌ای غنی و پرطعم با کرمای طلایی',
-        image: 'https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=400',
+        image: './../public/image/esperso.jpg',
         rating: 4.8
       },
       {
@@ -27,7 +27,7 @@ const Menu: React.FC = () => {
         name: 'کاپوچینو',
         price: 35000,
         description: 'ترکیبی عالی از اسپرسو و شیر بخارشده',
-        image: 'https://images.pexels.com/photos/761142/pexels-photo-761142.jpeg?auto=compress&cs=tinysrgb&w=400',
+        image: './../public/image/capochino.jpg',
         rating: 4.9
       },
       {
@@ -35,7 +35,7 @@ const Menu: React.FC = () => {
         name: 'لاته',
         price: 40000,
         description: 'قهوه نرم با شیر و کف شیر هنری',
-        image: 'https://images.pexels.com/photos/324028/pexels-photo-324028.jpeg?auto=compress&cs=tinysrgb&w=400',
+        image: './../public/image/late2.jpg',
         rating: 4.7
       },
       {
@@ -43,7 +43,7 @@ const Menu: React.FC = () => {
         name: 'موکا',
         price: 45000,
         description: 'قهوه با طعم شکلات و خامه',
-        image: 'https://images.pexels.com/photos/1695052/pexels-photo-1695052.jpeg?auto=compress&cs=tinysrgb&w=400',
+        image: './../public/image/moca.jpg',
         rating: 4.6
       }
     ],
@@ -53,7 +53,7 @@ const Menu: React.FC = () => {
         name: 'آیس کافی',
         price: 30000,
         description: 'قهوه سرد با یخ و شیر',
-        image: 'https://images.pexels.com/photos/1329571/pexels-photo-1329571.jpeg?auto=compress&cs=tinysrgb&w=400',
+        image: './../public/image/ice.jpg',
         rating: 4.5
       },
       {
@@ -61,7 +61,7 @@ const Menu: React.FC = () => {
         name: 'فراپه',
         price: 35000,
         description: 'نوشیدنی یخی با طعم قهوه و خامه',
-        image: 'https://images.pexels.com/photos/1417945/pexels-photo-1417945.jpeg?auto=compress&cs=tinysrgb&w=400',
+        image: '/../public/image/فراپه.png',
         rating: 4.4
       },
       {
@@ -69,7 +69,7 @@ const Menu: React.FC = () => {
         name: 'شیک شکلات',
         price: 40000,
         description: 'شیک کرمی با طعم شکلات',
-        image: 'https://images.pexels.com/photos/1556707/pexels-photo-1556707.jpeg?auto=compress&cs=tinysrgb&w=400',
+        image: './../public/image/sheik.jpg',
         rating: 4.7
       }
     ],
@@ -79,7 +79,7 @@ const Menu: React.FC = () => {
         name: 'تیرامیسو',
         price: 50000,
         description: 'دسر ایتالیایی با طعم قهوه',
-        image: 'https://images.pexels.com/photos/6880219/pexels-photo-6880219.jpeg?auto=compress&cs=tinysrgb&w=400',
+        image: './../public/image/tramiso.jpeg',
         rating: 4.9
       },
       {
@@ -87,7 +87,7 @@ const Menu: React.FC = () => {
         name: 'چیزکیک شکلاتی',
         price: 45000,
         description: 'چیزکیک کرمی با روکش شکلات',
-        image: 'https://images.pexels.com/photos/140831/pexels-photo-140831.jpeg?auto=compress&cs=tinysrgb&w=400',
+        image: './../public/image/chizkike.jpg',
         rating: 4.8
       },
       {
@@ -95,7 +95,7 @@ const Menu: React.FC = () => {
         name: 'کروسان',
         price: 20000,
         description: 'کروسان تازه با کره',
-        image: 'https://images.pexels.com/photos/2135/food-france-morning-breakfast.jpg?auto=compress&cs=tinysrgb&w=400',
+        image: './../public/image/kike.jpg',
         rating: 4.3
       }
     ]
