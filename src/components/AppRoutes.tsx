@@ -9,6 +9,7 @@ import ProductDetail from './ProductDetail';
 import FeaturedProducts from './FeaturedProducts';
 import Blog from './Blog';
 import BlogPost from './BlogPost';
+import NotFound from './NotFound';
 
 const AppRoutes: React.FC = () => {
   return (
@@ -27,7 +28,8 @@ const AppRoutes: React.FC = () => {
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/blog" element={<Blog />} />
-      <Route path='/blog-post' element={<BlogPost/>}/>
+      <Route path="/blog/:id" element={<BlogPost />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 };

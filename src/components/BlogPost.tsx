@@ -1,65 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ChevronRight, Clock, Share2 } from 'lucide-react';
-
-interface BlogPost {
-  id: number;
-  title: string;
-  excerpt: string;
-  content: string;
-  image: string;
-  category: 'brewing' | 'types' | 'health';
-  readTime: number;
-  date: string;
-  author: {
-    name: string;
-    avatar: string;
-  };
-  tags: string[];
-}
-
-// برای نمونه از همان مقالات قبلی استفاده می‌کنیم
-const blogPosts: BlogPost[] = [
-  {
-    id: 1,
-    title: "راهنمای کامل دم کردن قهوه با روش پور اور",
-    excerpt: "در این مقاله، تکنیک‌های حرفه‌ای دم کردن قهوه به روش پور اور را به صورت گام به گام یاد می‌گیرید.",
-    content: `
-      <h2>مقدمه</h2>
-      <p>دم کردن قهوه به روش پور اور یکی از محبوب‌ترین روش‌های تهیه قهوه در بین علاقه‌مندان به قهوه است. این روش به شما اجازه می‌دهد کنترل کاملی بر روی فرایند دم‌آوری داشته باشید.</p>
-
-      <h2>وسایل مورد نیاز</h2>
-      <ul>
-        <li>فیلتر پور اور</li>
-        <li>قهوه آسیاب شده</li>
-        <li>کتری</li>
-        <li>ترازو</li>
-      </ul>
-
-      <h2>مراحل دم کردن</h2>
-      <p>1. آب را تا دمای 92-96 درجه سانتیگراد گرم کنید.</p>
-      <p>2. فیلتر را با آب گرم آبکشی کنید.</p>
-      <p>3. 20 گرم قهوه آسیاب شده را در فیلتر بریزید.</p>
-      <p>4. به آرامی 50 میلی‌لیتر آب روی قهوه بریزید و 30 ثانیه صبر کنید.</p>
-      <p>5. به تدریج بقیه آب را اضافه کنید تا به 300 میلی‌لیتر برسید.</p>
-
-      <h2>نکات کلیدی</h2>
-      <p>- درجه آسیاب قهوه باید متوسط باشد</p>
-      <p>- زمان کل فرایند باید حدود 3 دقیقه باشد</p>
-      <p>- دما و سرعت ریختن آب بسیار مهم است</p>
-    `,
-    image: "https://images.pexels.com/photos/7657823/pexels-photo-7657823.jpeg?auto=compress&cs=tinysrgb&w=800",
-    category: "brewing",
-    readTime: 8,
-    date: "۱۵ شهریور ۱۴۰۲",
-    author: {
-      name: "علی کریمی",
-      avatar: "https://i.pravatar.cc/150?img=11"
-    },
-    tags: ["قهوه", "دم‌آوری", "پور اور", "آموزش"]
-  },
-  // ... سایر مقالات
-];
+import { blogPosts } from '../data/blogData';
 
 const BlogPost: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -128,9 +70,19 @@ const BlogPost: React.FC = () => {
         </div>
 
         {/* Content */}
-        <div className="bg-white rounded-xl shadow-md p-8 mb-8">
+        <div className="bg-white rounded-xl shadow-md p-8 md:p-12 mb-8">
           <div 
-            className="prose prose-lg prose-amber max-w-none"
+            className="prose prose-lg max-w-none
+              prose-headings:text-gray-900 prose-headings:font-bold
+              prose-h2:text-2xl prose-h2:mt-8 prose-h2:mb-4 prose-h2:pb-2 prose-h2:border-b-2 prose-h2:border-amber-200
+              prose-h3:text-xl prose-h3:mt-6 prose-h3:mb-3
+              prose-p:text-gray-700 prose-p:leading-relaxed prose-p:mb-4
+              prose-ul:list-disc prose-ul:mr-6 prose-ul:mb-4 prose-ul:text-gray-700
+              prose-li:mb-2
+              prose-strong:text-gray-900 prose-strong:font-semibold
+              prose-table:w-full prose-table:border-collapse prose-table:my-6
+              prose-th:border prose-th:border-gray-300 prose-th:bg-amber-50 prose-th:p-3 prose-th:text-right
+              prose-td:border prose-td:border-gray-300 prose-td:p-3 prose-td:text-right"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
         </div>
