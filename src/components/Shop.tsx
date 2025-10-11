@@ -33,7 +33,7 @@ const Shop: React.FC = () => {
       roastLevel: "تیره",
       price: 85000,
       rating: 4.5,
-      image: "https://images.pexels.com/photos/7657823/pexels-photo-7657823.jpeg?auto=compress&cs=tinysrgb&w=800",
+      image: "./../public/image/cofe1.jpg",
       description: "قهوه ترک سنتی با طعم غنی و پررنگ"
     },
     {
@@ -43,7 +43,7 @@ const Shop: React.FC = () => {
       roastLevel: "متوسط",
       price: 65000,
       rating: 4.8,
-      image: "https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=800",
+      image: "./../public/image/esperso.jpg",
       description: "اسپرسو با کیفیت با عطر دلپذیر"
     },
     {
@@ -53,7 +53,7 @@ const Shop: React.FC = () => {
       roastLevel: "روشن",
       price: 120000,
       rating: 4.9,
-      image: "https://images.pexels.com/photos/2074122/pexels-photo-2074122.jpeg?auto=compress&cs=tinysrgb&w=800",
+      image: "./../public/image/late2.jpg",
       description: "دانه‌های عربیکای مرغوب با طعمی متعادل"
     },
     // Add more products as needed
