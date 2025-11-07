@@ -14,7 +14,7 @@ import NotFound from './NotFound';
 const AppRoutes: React.FC = () => {
   return (
     <Routes>
-      <Route path="/" element={
+      <Route path="/cafe" element={
         <>
           <Hero />
           <FeaturedProducts />
@@ -22,13 +22,13 @@ const AppRoutes: React.FC = () => {
           <About />
         </>
       } />
-      <Route path="/menu" element={<Menu />} />
-      <Route path="/shop" element={<Shop />} />
-      <Route path="/shop/:id" element={<ProductDetail />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/blog" element={<Blog />} />
-      <Route path="/blog/:id" element={<BlogPost />} />
+      <Route path="/cafe/menu" element={<Menu />} />
+      <Route path="/cafe/shop" element={<Shop />} />
+      <Route path="/cafe/shop/:id" element={<ProductDetail />} />
+      <Route path="/cafe/about" element={<About />} />
+      <Route path="/cafe/contact" element={<Contact />} />
+      <Route path="/cafe/blog" element={<Blog />} />
+      <Route path="/cafe/blog/:id" element={<BlogPost />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

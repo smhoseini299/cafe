@@ -20,12 +20,12 @@ const Header: React.FC<HeaderProps> = ({ setIsCartOpen }) => {
   };
 
   const menuItems = [
-    { path: '/', label: 'صفحه اصلی' },
-    { path: '/shop', label: 'فروشگاه' },
-    { path: '/menu', label: 'منو' },
-    { path: '/blog', label: 'وبلاگ' },
-    { path: '/about', label: 'درباره ما' },
-    { path: '/contact', label: 'تماس با ما' },
+    { path: '/cafe', label: 'صفحه اصلی' },
+    { path: '/cafe/shop', label: 'فروشگاه' },
+    { path: '/cafe/menu', label: 'منو' },
+    { path: '/cafe/blog', label: 'وبلاگ' },
+    { path: '/cafe/about', label: 'درباره ما' },
+    { path: '/cafe/contact', label: 'تماس با ما' },
   ];
 
   return (
@@ -33,7 +33,7 @@ const Header: React.FC<HeaderProps> = ({ setIsCartOpen }) => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
+          <Link to="/cafe" className="flex items-center gap-2">
             <Coffee className="w-8 h-8 text-amber-300" />
             <h1 className="text-2xl font-bold">کافه رویایی</h1>
           </Link>
