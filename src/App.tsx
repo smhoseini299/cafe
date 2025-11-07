@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -12,7 +12,7 @@ function App() {
   return (
     <Router>
       <CartProvider>
-        <div className="min-h-screen bg-amber-50 font-sans" dir="rtl">
+        <div className="min-h-screen bg-white font-sans" dir="rtl">
           <Header 
             setIsCartOpen={setIsCartOpen}
           />

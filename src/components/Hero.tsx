@@ -1,50 +1,47 @@
+import { assetPath } from '../utils/assetPath';
+import { Link } from 'react-router-dom';
 import React from 'react';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative bg-gradient-to-l from-amber-100 to-amber-200 py-20">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+    <section className="bg-white py-16 md:py-24">
+      <div className="container mx-auto px-6">
+        <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           {/* Text Content */}
-          <div className="text-center md:text-right">
-            <h1 className="text-5xl md:text-6xl font-bold text-amber-900 mb-6 leading-tight">
-              بهترین قهوه
-              <br />
-              <span className="text-amber-700">شهر</span>
+          <div className="text-center md:text-right order-2 md:order-1">
+            <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 leading-tight tracking-tight">
+              قهوه تازه، هر روز
             </h1>
-            <p className="text-xl text-amber-800 mb-8 leading-relaxed">
-              در کافه رویایی، ما بهترین دانه‌های قهوه را از سراسر جهان تهیه کرده و با عشق برای شما آماده می‌کنیم. طعمی فراموش‌نشدنی را تجربه کنید.
+            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+              تجربه طعم اصیل قهوه با دانه‌های برشته‌شده تازه. 
+              سفارش آنلاین یا حضوری از کافه رویایی.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <button className="bg-amber-700 hover:bg-amber-800 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+              <Link
+                to="/cafe/menu"
+                className="inline-block bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-lg font-medium text-base transition-colors"
+              >
                 مشاهده منو
-              </button>
-              <button className="border-2 border-amber-700 text-amber-700 hover:bg-amber-700 hover:text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300">
-                درباره ما
-              </button>
+              </Link>
+              <Link
+                to="/cafe/shop"
+                className="inline-block border-2 border-gray-300 text-gray-700 hover:border-gray-400 hover:bg-gray-50 px-8 py-3 rounded-lg font-medium text-base transition-colors"
+              >
+                خرید آنلاین
+              </Link>
             </div>
           </div>
 
           {/* Hero Image */}
-          <div className="relative">
-            <div className="relative z-10">
-              <img
-                src="./../public/image/cofe1.jpg"
-                alt="قهوه تازه"
-                className="rounded-2xl shadow-2xl w-full h-96 object-cover"
-              />
-            </div>
-            {/* Decorative Elements */}
-            <div className="absolute -top-6 -right-6 w-24 h-24 bg-amber-300 rounded-full opacity-50 z-0"></div>
-            <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-amber-400 rounded-full opacity-30 z-0"></div>
+          <div className="order-1 md:order-2">
+            <img
+              src={assetPath('image/cofe1.jpg')}
+              alt="قهوه تازه کافه رویایی"
+              className="rounded-lg w-full h-80 md:h-96 object-cover"
+            />
           </div>
         </div>
       </div>
-
-      {/* Floating Coffee Beans */}
-      <div className="absolute top-20 right-10 w-4 h-4 bg-amber-600 rounded-full opacity-60 animate-bounce"></div>
-      <div className="absolute top-40 left-20 w-3 h-3 bg-amber-700 rounded-full opacity-50 animate-bounce" style={{animationDelay: '1s'}}></div>
-      <div className="absolute bottom-20 right-1/4 w-2 h-2 bg-amber-800 rounded-full opacity-40 animate-bounce" style={{animationDelay: '2s'}}></div>
     </section>
   );
 };

@@ -7,6 +7,7 @@ import About from './About';
 import Contact from './Contact';
 import ProductDetail from './ProductDetail';
 import FeaturedProducts from './FeaturedProducts';
+import ValueProps from './ValueProps';
 import Blog from './Blog';
 import BlogPost from './BlogPost';
 import NotFound from './NotFound';
@@ -17,9 +18,8 @@ const AppRoutes: React.FC = () => {
       <Route path="/cafe" element={
         <>
           <Hero />
+          <ValueProps />
           <FeaturedProducts />
-          <Menu />
-          <About />
         </>
       } />
       <Route path="/cafe/menu" element={<Menu />} />

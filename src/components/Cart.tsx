@@ -33,22 +33,22 @@ const Cart: React.FC<CartProps> = ({ isOpen, onClose }) => {
   return (
     <div className="fixed inset-0 z-50 overflow-hidden">
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-50" onClick={onClose}></div>
+      <div className="absolute inset-0 bg-black bg-opacity-40" onClick={onClose}></div>
       
       {/* Cart Sidebar */}
-      <div className="absolute top-0 right-0 h-full w-full max-w-md bg-white shadow-xl">
+      <div className="absolute top-0 right-0 h-full w-full max-w-md bg-white">
         <div className="flex flex-col h-full">
           {/* Header */}
-          <div className="flex justify-between items-center p-6 border-b border-amber-200">
-            <h2 className="text-xl font-bold text-amber-900 flex items-center gap-2">
-              <ShoppingBag className="w-6 h-6" />
+          <div className="flex justify-between items-center p-6 border-b border-gray-200">
+            <h2 className="text-lg font-bold text-gray-900 flex items-center gap-2">
+              <ShoppingBag className="w-5 h-5" />
               سبد خرید
             </h2>
             <button
               onClick={onClose}
-              className="p-2 hover:bg-amber-100 rounded-full transition-colors"
+              className="p-2 hover:bg-gray-100 rounded-md transition-colors"
             >
-              <X className="w-6 h-6 text-amber-700" />
+              <X className="w-5 h-5 text-gray-700" />
             </button>
           </div>
 
@@ -56,21 +56,21 @@ const Cart: React.FC<CartProps> = ({ isOpen, onClose }) => {
           <div className="flex-1 overflow-y-auto p-6">
             {state.items.length === 0 ? (
               <div className="text-center py-12">
-                <ShoppingBag className="w-16 h-16 text-amber-300 mx-auto mb-4" />
-                <p className="text-amber-600 text-lg">سبد خرید شما خالی است</p>
+                <ShoppingBag className="w-16 h-16 text-gray-300 mx-auto mb-4" />
+                <p className="text-gray-600">سبد خرید شما خالی است</p>
               </div>
             ) : (
               <div className="space-y-4">
                 {state.items.map((item) => (
-                  <div key={item.id} className="flex gap-4 bg-amber-50 p-4 rounded-lg">
+                  <div key={item.id} className="flex gap-4 border border-gray-200 p-4 rounded-lg">
                     <img
                       src={item.image}
                       alt={item.name}
-                      className="w-16 h-16 object-cover rounded-lg"
+                      className="w-16 h-16 object-cover rounded-md"
                     />
                     <div className="flex-1">
-                      <h3 className="font-semibold text-amber-900 mb-1">{item.name}</h3>
-                      <p className="text-amber-600 text-sm mb-2">
+                      <h3 className="font-medium text-gray-900 mb-1">{item.name}</h3>
+                      <p className="text-sm text-gray-600 mb-2">
                         {formatPrice(item.price)}
                       </p>
                       
@@ -79,24 +79,24 @@ const Cart: React.FC<CartProps> = ({ isOpen, onClose }) => {
                         <div className="flex items-center gap-2">
                           <button
                             onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                            className="w-8 h-8 bg-amber-200 hover:bg-amber-300 rounded-full flex items-center justify-center transition-colors"
+                            className="w-7 h-7 bg-gray-100 hover:bg-gray-200 rounded-md flex items-center justify-center transition-colors"
                           >
-                            <Minus className="w-4 h-4 text-amber-700" />
+                            <Minus className="w-4 h-4 text-gray-700" />
                           </button>
-                          <span className="w-8 text-center font-semibold text-amber-900">
+                          <span className="w-8 text-center font-medium text-gray-900 text-sm">
                             {item.quantity}
                           </span>
                           <button
                             onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                            className="w-8 h-8 bg-amber-200 hover:bg-amber-300 rounded-full flex items-center justify-center transition-colors"
+                            className="w-7 h-7 bg-gray-100 hover:bg-gray-200 rounded-md flex items-center justify-center transition-colors"
                           >
-                            <Plus className="w-4 h-4 text-amber-700" />
+                            <Plus className="w-4 h-4 text-gray-700" />
                           </button>
                         </div>
                         
                         <button
                           onClick={() => removeItem(item.id)}
-                          className="p-2 text-red-500 hover:bg-red-50 rounded-full transition-colors"
+                          className="p-1.5 text-red-500 hover:bg-red-50 rounded-md transition-colors"
                         >
                           <Trash2 className="w-4 h-4" />
                         </button>
@@ -110,15 +110,15 @@ const Cart: React.FC<CartProps> = ({ isOpen, onClose }) => {
 
           {/* Footer */}
           {state.items.length > 0 && (
-            <div className="p-6 border-t border-amber-200">
+            <div className="p-6 border-t border-gray-200 bg-gray-50">
               <div className="flex justify-between items-center mb-4">
-                <span className="text-lg font-semibold text-amber-900">مجموع:</span>
-                <span className="text-xl font-bold text-amber-900">
+                <span className="text-sm font-medium text-gray-700">مجموع:</span>
+                <span className="text-xl font-bold text-gray-900">
                   {formatPrice(state.total)}
                 </span>
               </div>
               
-              <button className="w-full bg-amber-700 hover:bg-amber-800 text-white py-3 rounded-lg font-semibold transition-colors">
+              <button className="w-full bg-amber-600 hover:bg-amber-700 text-white py-3 rounded-lg font-medium transition-colors">
                 ادامه خرید
               </button>
             </div>

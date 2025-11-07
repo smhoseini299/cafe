@@ -1,3 +1,4 @@
+import { assetPath } from '../utils/assetPath';
 import React from 'react';
 import { Coffee, Users, Award, Heart } from 'lucide-react';
 
@@ -25,6 +26,24 @@ const About: React.FC = () => {
     }
   ];
 
+  const teamMembers = [
+    {
+      name: 'احمد محمدی',
+      role: 'سرآشپز',
+      image: assetPath('image/bar4.jpg')
+    },
+    {
+      name: 'سارا کریمی',
+      role: 'باریستا ارشد',
+      image: assetPath('image/bar1.jpg')
+    },
+    {
+      name: 'علی رضایی',
+      role: 'متخصص برشته کاری',
+      image: assetPath('image/bar2.png')
+    }
+  ];
+
   return (
     <section className="py-16 bg-amber-50">
       <div className="container mx-auto px-4">
@@ -39,7 +58,7 @@ const About: React.FC = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div>
             <img
-              src="./../public/image/cafee.jpeg"
+              src={assetPath('image/cafee.jpeg')}
               alt="داخل کافه"
               className="rounded-2xl shadow-xl w-full h-96 object-cover"
             />
@@ -79,23 +98,7 @@ const About: React.FC = () => {
         <div className="mt-16 text-center">
           <h3 className="text-3xl font-bold text-amber-900 mb-8">تیم ما</h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                name: 'احمد محمدی',
-                role: 'سرآشپز',
-                image: './../public/image/bar4.jpg'
-              },
-              {
-                name: 'سارا کریمی',
-                role: 'باریستا ارشد',
-                image: './../public/image/bar1.jpg'
-              },
-              {
-                name: 'علی رضایی',
-                role: 'متخصص برشته کاری',
-                image: './../public/image/bar2.png'
-              }
-            ].map((member, index) => (
+            {teamMembers.map((member, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
                 <img
                   src={member.image}

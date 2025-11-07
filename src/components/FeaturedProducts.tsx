@@ -1,89 +1,71 @@
+import { assetPath } from '../utils/assetPath';
+import { Link } from 'react-router-dom';
 import React from 'react';
 
 const FeaturedProducts: React.FC = () => {
-  const specialOffer = {
-    title: "پیشنهاد ویژه امروز",
-    description: "لاته دابل شات با ۳۰٪ تخفیف",
-    image: "./../public/image/late2.jpg"
-  };
-
   const bestSellers = [
     {
       id: 1,
-      name: "کاپوچینو",
-      price: "۶۵,۰۰۰",
-      image: "./../public/image/capochino.jpg",
-      tag: "پرفروش"
+      name: "کاپوچینو کلاسیک",
+      price: 35000,
+      image: assetPath('image/capochino.jpg'),
     },
     {
       id: 2,
-      name: "اسپرسو",
-      price: "۴۵,۰۰۰",
-      image: "./../public/image/esperso.jpg",
-      tag: "کلاسیک"
+      name: "اسپرسو ایتالیایی",
+      price: 25000,
+      image: assetPath('image/esperso.jpg'),
     },
     {
       id: 3,
-      name: "موکا",
-      price: "۷۵,۰۰۰",
-      image: "./../public/image/moca.jpg",
-      tag: "جدید"
+      name: "موکا شکلاتی",
+      price: 45000,
+      image: assetPath('image/moca.jpg'),
+    },
+    {
+      id: 4,
+      name: "لاته دابل",
+      price: 40000,
+      image: assetPath('image/late2.jpg'),
     }
   ];
 
   return (
-    <section className="py-16 bg-amber-50">
-      <div className="container mx-auto px-4">
-        {/* Special Offer */}
-        <div className="mb-16 bg-white rounded-2xl shadow-lg overflow-hidden">
-          <div className="grid md:grid-cols-2 items-center">
-            <div className="p-8 md:p-12">
-              <span className="inline-block bg-red-100 text-red-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-                پیشنهاد ویژه
-              </span>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">{specialOffer.title}</h2>
-              <p className="text-xl text-gray-600 mb-6">{specialOffer.description}</p>
-              <button className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-lg font-bold transition-all duration-300 transform hover:scale-105">
-                همین حالا سفارش دهید
-              </button>
-            </div>
-            <div className="relative h-64 md:h-full">
-              <img
-                src={specialOffer.image}
-                alt="پیشنهاد ویژه"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-white/20 to-transparent"></div>
-            </div>
-          </div>
+    <section className="py-16 bg-white">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-3">محصولات محبوب</h2>
+          <p className="text-gray-600">پرطرفدارترین نوشیدنی‌های کافه رویایی</p>
         </div>
 
-        {/* Best Sellers Section */}
-        <div>
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">محصولات پرفروش</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {bestSellers.map((product) => (
-              <div key={product.id} className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
-                <div className="relative">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full h-48 object-cover"
-                  />
-                  <span className="absolute top-4 right-4 bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">
-                    {product.tag}
-                  </span>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{product.name}</h3>
-                  <p className="text-amber-600 font-bold">{product.price} تومان</p>
-                  <button className="mt-4 w-full bg-amber-100 hover:bg-amber-200 text-amber-800 px-4 py-2 rounded-lg font-semibold transition-colors duration-300">
-                    افزودن به سبد خرید
-                  </button>
-                </div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          {bestSellers.map((product) => (
+            <div key={product.id} className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:border-amber-600 transition-colors group">
+              <div className="relative aspect-square overflow-hidden">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-full object-cover"
+                />
               </div>
-            ))}
-          </div>
+              <div className="p-4">
+                <h3 className="font-semibold text-gray-900 mb-2">{product.name}</h3>
+                <p className="text-sm text-gray-600 mb-3">{product.price.toLocaleString('fa-IR')} تومان</p>
+                <button className="w-full bg-amber-600 hover:bg-amber-700 text-white py-2 rounded-md text-sm font-medium transition-colors">
+                  افزودن به سبد
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center mt-12">
+          <Link
+            to="/cafe/menu"
+            className="inline-block text-amber-600 hover:text-amber-700 font-medium"
+          >
+            مشاهده منوی کامل ←
+          </Link>
         </div>
       </div>
     </section>

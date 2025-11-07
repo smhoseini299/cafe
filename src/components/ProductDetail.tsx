@@ -1,3 +1,4 @@
+import { assetPath } from '../utils/assetPath';
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
@@ -39,7 +40,7 @@ const products: Product[] = [
     roastLevel: "تیره",
     basePrice: 85000,
     rating: 4.5,
-    image: "./../public/image/capochino.jpg",
+    image: assetPath('image/capochino.jpg'),
     description: "قهوه ترک سنتی با طعم غنی و پررنگ",
     longDescription: "قهوه ترک کلاسیک ما با دقت خاصی برشته و آسیاب می‌شود تا طعم غنی و اصیل قهوه ترک را به شما هدیه دهد. این قهوه با رایحه دلپذیر و عطر ماندگارش، تجربه‌ای بی‌نظیر از نوشیدن قهوه را برایتان به ارمغان می‌آورد.",
     origin: "ترکیه",

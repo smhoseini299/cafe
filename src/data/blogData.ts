@@ -1,3 +1,4 @@
+import { assetPath } from '../utils/assetPath';
 export interface BlogPost {
   id: number;
   title: string;
@@ -63,7 +64,7 @@ export const blogPosts: BlogPost[] = [
       <h2>نتیجه‌گیری</h2>
       <p>دم کردن قهوه به روش پور اور هنری است که با تمرین کامل می‌شود. با رعایت این نکات و تمرین مداوم، به زودی می‌توانید یک فنجان قهوه عالی تهیه کنید.</p>
     `,
-    image: "./../public/image/cofe1.jpg",
+    image: assetPath('image/cofe1.jpg'),
     category: "brewing",
     readTime: 8,
     date: "۱۵ شهریور ۱۴۰۲",
@@ -166,7 +167,7 @@ export const blogPosts: BlogPost[] = [
       <h2>نتیجه‌گیری</h2>
       <p>شناخت انواع مختلف عربیکا به شما کمک می‌کند تا قهوه‌ای متناسب با سلیقه خود انتخاب کنید. هر واریته ویژگی‌های منحصر به فرد خود را دارد که تجربه‌ای متفاوت از قهوه ارائه می‌دهد.</p>
     `,
-    image: "./../public/image/esperso.jpg",
+    image: assetPath('image/esperso.jpg'),
     category: "types",
     readTime: 12,
     date: "۱۲ شهریور ۱۴۰۲",
@@ -270,7 +271,7 @@ export const blogPosts: BlogPost[] = [
       <h2>نتیجه‌گیری</h2>
       <p>مصرف معتدل قهوه می‌تواند تأثیرات مثبت قابل توجهی بر سلامت مغز و حافظه داشته باشد. با این حال، مهم است که به صورت متعادل و در مقادیر مناسب مصرف شود و همیشه با پزشک خود مشورت کنید، به خصوص اگر شرایط پزشکی خاصی دارید.</p>
     `,
-    image: "./../public/image/capochino.jpg",
+    image: assetPath('image/capochino.jpg'),
     category: "health",
     readTime: 10,
     date: "۱۰ شهریور ۱۴۰۲",
